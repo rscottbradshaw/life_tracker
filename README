@@ -1,0 +1,7 @@
+School Information and Life Events
+
+School Info
+You enter your schools attended followed by the first and last years attended.  You cannot leave any space blank or it will not validate.  You also cannot have your beginning year after your ending year.
+
+Life Events
+You enter in a title of the event followed by the date in which it occurred and a description.  You have to complete the title and date for it to validate.  The description can be left out but if you do complete that portion, it has to be less than 140 characters. 
