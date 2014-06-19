@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <ul>
+    <strong>School Name</strong>
+    <% @person.schools.order(:school_name).each do |school| %>
+      <li><%= school.school_name %></li>
+    <%  end %>
+  </ul>
+</p>
+
+<p>
+  <ul>
+    <strong>Event Title</strong>
+    <% @person.life_events.order(:title).each do |life_event| %>
+      <li><%= life_event.title %></li>
+    <%  end %>
+  </ul>
+</p>
+
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
