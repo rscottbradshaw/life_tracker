@@ -1,7 +1,25 @@
-<h1>Life Tracker Home</h1>
+<div class='row'>
+  <div class='columns large-12 text-center'>
+    <h1>Welcome to Life Tracker!</h1>
+  </div>
+</div>
 
-<!-- <p><%= link_to "Schools", schools_path%></p>
-<p><%= link_to "Life Events", life_events_path%></p>
-<p><%= link_to "People", people_path%></p> -->
+<div class='row'>
+  <div class='columns large-6'>
+    <h2>Recent Schools</h2>
+    <% @schools.order(:created_at).limit(5).each do |school| %>
+        <p><%= school.person.name %> just added <%= school.school_name %> to his list of schools!</p>
+        <p><%= school.created_at %></p>
+    <% end %>
+  </div>
 
-<p>Welcome to Life Tracker!!!  This site will allow you to enter Schools you have attended and also life events.  It will then give you a list of all your data under your name.</p>
+  <div class='columns large-6'>
+    <h2>Recent Life Events</h2>
+    <% @life_events.order(:created_at).limit(5).each do |event| %>
+        <p><%= event.person.name %> just added <%= event.title %> to his list of schools!</p>
+        <p><%= event.created_at %></p>
+    <% end %>
+  </div>
+</div>
+
+
